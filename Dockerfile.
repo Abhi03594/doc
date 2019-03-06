@@ -4,7 +4,7 @@
 FROM node:9-alpine AS builder
 
 # Define working directory and copy source
-WORKDIR /home/node/app
+WORKDIR /home/yobitel/Dockerfile.
 COPY . .
 # Install dependencies and build whatever you have to build 
 # (babel, grunt, webpack, etc.)
@@ -15,7 +15,7 @@ RUN npm install && npm run build
 #
 FROM node:9-alpine
 ENV NODE_ENV=production
-WORKDIR /home/node/app
+WORKDIR /home/yobitel/Dockerfile.
 
 # Install deps for production only
 COPY ./package* ./
